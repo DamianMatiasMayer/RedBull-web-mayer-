@@ -1,9 +1,4 @@
 /* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     margin: 0;
@@ -23,106 +18,7 @@ header {
     position: relative;
 }
 
-/* Tamaño del logo */
-.logo img {
 
-    height: 40px;
-
-}
-
-/* Barra de navegación (links) */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    /* asegura ancho de pantalla completa */
-    background-color: #0d1b2a;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    font-family: 'Oswald', sans-serif;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-}
-
-
-nav ul {
-    display: flex;
-    /* Links en fila */
-    list-style: none;
-    /* Elimina los puntos de lista */
-    gap: 30px;
-    /* Espacio entre los enlaces */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    /* el color se mantiene igual */
-    font-weight: 500;
-    letter-spacing: 1px;
-    position: relative;
-    transition: color 0.3s ease;
-
-}
-
-
-
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #00bfff;
-    /* celeste tipo Red Bull */
-    transition: width 0.3s ease;
-}
-
-
-
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-
-
-/* Ícono del carrito */
-.icono-carrito {
-    height: 20px;
-    filter: invert(100%);
-    transition: transform 0.3s ease;
-}
-
-.carrito-link {
-    position: relative;
-    display: inline-block;
-}
-
-.carrito-link::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #00bfff;
-    transition: width 0.3s ease;
-}
-
-.carrito-link:hover::after {
-    width: 100%;
-}
 
 /* Cartel sobre la imagen */
 .cartel {
@@ -247,8 +143,6 @@ nav ul li a:hover::after {
     /* Ajustá translateX para centrar mejor si es necesario */
 }
 
-
-
 /*bloque inclinado*/
 .bloque-inclinado {
     background-color: #002654;
@@ -273,7 +167,7 @@ nav ul li a:hover::after {
 .contenido-inclinado p {
     font-size: 24px;
 }
-
+/* fin bloque inclinado*/
 
 /* Noticias */
 
@@ -317,6 +211,7 @@ nav ul li a:hover::after {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
+/* fin Noticias */
 
 /* Lado izquierdo: imagen */
 .imagen-carta {
