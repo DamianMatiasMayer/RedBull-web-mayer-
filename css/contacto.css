@@ -39,6 +39,7 @@ header {
 /* bloque inclinado */
 
 .bloque-inclinado-contacto {
+  position: relative;
   background-color: #1c1c1c;
   clip-path: polygon(0 50px, 100% 0, 100% 100%, 0% 100%);
   padding: 100px 40px;
@@ -48,6 +49,19 @@ header {
   z-index: 1;
   margin-top: -50px;
 }
+
+.bloque-inclinado-contacto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+   height: 100px; /* ← antes estaba en 50px, ahora más fina */
+  background-color: #c70000; /* rojo Red Bull */
+  clip-path: polygon(0 10px, 100% 0, 100% 9px, 0% 52%);
+  z-index: -1;
+}
+
 
 .contenido-inclinado {
   max-width: 800px;
@@ -66,3 +80,101 @@ header {
 }
 
 /*fin bloque inclinado */
+
+
+/* formulario */
+
+.formulario-contacto {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  background-color: white;
+  color: #222;
+  resize: none;
+}
+
+.formulario-contacto button {
+  background-color: #ffc72c;
+  color: #002654;
+  border: none;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  align-self: center;
+  transform: skew(-10deg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.formulario-contacto button span {
+  display: inline-block;
+  transform: skew(10deg);
+}
+
+.formulario-contacto button:hover {
+  background-color: #c70000;
+  color: white;
+}
+
+
+/*informacion de contacto*/
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.info-contacto {
+  margin-top: 60px;
+  padding: 30px 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.info-contacto h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffc72c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-contacto p {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #eee;
+}
+
+.info-contacto i {
+  margin-right: 10px;
+  color: #00bfff;
+}
+
+
+
+/* fin formulario e informacion de contacto*/
